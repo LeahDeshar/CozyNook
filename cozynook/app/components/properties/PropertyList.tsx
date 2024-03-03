@@ -11,34 +11,35 @@ export type PropertyType = {
 };
 
 const PropertyList = () => {
-  const [properties, setProperties] = useState<PropertyType[]>([]);
+  //   const [properties, setProperties] = useState<PropertyType[]>([]);
 
-  const getProperties = async () => {
-    const url = "http://localhost:8000/api/properties/";
+  //   const getProperties = async () => {
+  //     const url = "http://localhost:8000/api/properties/";
 
-    await fetch(url, {
-      method: "GET",
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        console.log("json", json);
+  //     await fetch(url, {
+  //       method: "GET",
+  //     })
+  //       .then((response) => response.json())
+  //       .then((json) => {
+  //         console.log("json", json);
 
-        setProperties(json.data);
-      })
-      .catch((error) => {
-        console.log("error", error);
-      });
-  };
+  //         setProperties(json.data);
+  //       })
+  //       .catch((error) => {
+  //         console.log("error", error);
+  //       });
+  //   };
 
-  useEffect(() => {
-    getProperties();
-  }, []);
+  //   useEffect(() => {
+  //     getProperties();
+  //   }, []);
 
   return (
     <>
-      {properties.map((property) => {
+      {/* {properties.map((property) => {
         return <PropertyListItem key={property.id} property={property} />;
-      })}
+      })} */}
+      <PropertyListItem />
     </>
   );
 };
