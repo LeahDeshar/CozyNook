@@ -1,5 +1,7 @@
 "use client";
 
+import CustomButton from "../forms/CustomButton";
+
 // import CustomButton from "../forms/CustomButton";
 
 const ConversationDetails = () => {
@@ -13,7 +15,7 @@ const ConversationDetails = () => {
         </div>
 
         <div className="w-[80%] ml-[20%] py-4 px-6 rounded-xl bg-blue-200">
-          <p className="font-bold text-gray-500">Code With Stein</p>
+          <p className="font-bold text-gray-500">Owner</p>
 
           <p>laskjdf lasjd faslkjf lkasjdflkasldf</p>
         </div>
@@ -25,12 +27,12 @@ const ConversationDetails = () => {
           placeholder="Type your message..."
           className="w-full p-2 bg-gray-200 rounded-xl"
         />
-        {/* 
+
         <CustomButton
           label="Send"
           onClick={() => console.log("Clicked")}
           className="w-[100px]"
-        /> */}
+        />
       </div>
     </>
   );
