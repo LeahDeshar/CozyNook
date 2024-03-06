@@ -4,9 +4,8 @@ import Modal from "./Modal";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
-import CustomButton from "../forms/CustomButton";
 import useLoginModal from "@/app/hooks/useLoginModal";
+import CustomButton from "../forms/CustomButton";
 // import { handleLogin } from "@/app/lib/actions";
 // import apiService from "@/app/services/apiService";
 
@@ -18,24 +17,17 @@ const LoginModal = () => {
   const [errors, setErrors] = useState<string[]>([]);
 
   const submitLogin = async () => {
-    const formData = {
-      email: email,
-      password: password,
-    };
-
-    // const response = await apiService.post(
-    //   "/api/auth/login/",
-    //   JSON.stringify(formData)
-    // );
-
+    // const formData = {
+    //     email: email,
+    //     password: password
+    // }
+    // const response = await apiService.post('/api/auth/login/', JSON.stringify(formData))
     // if (response.access) {
-    //   handleLogin(response.user.pk, response.access, response.refresh);
-
-    loginModal.close();
-
-    router.push("/");
+    //     handleLogin(response.user.pk, response.access, response.refresh);
+    //     loginModal.close();
+    //     router.push('/')
     // } else {
-    //   setErrors(response.non_field_errors);
+    //     setErrors(response.non_field_errors);
     // }
   };
 
