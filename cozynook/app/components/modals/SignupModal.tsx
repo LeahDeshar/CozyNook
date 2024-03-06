@@ -6,8 +6,8 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import useSignupModal from "@/app/hooks/useSignupModal";
 import CustomButton from "../forms/CustomButton";
-import apiService from "@/app/services/apiService";
-import { handleLogin } from "@/app/lib/actions";
+// import apiService from "@/app/services/apiService";
+// import { handleLogin } from "@/app/lib/actions";
 
 const SignupModal = () => {
   //
@@ -30,24 +30,24 @@ const SignupModal = () => {
       password2: password2,
     };
 
-    const response = await apiService.post(
-      "/api/auth/register/",
-      JSON.stringify(formData)
-    );
+    //   const response = await apiService.post(
+    //     "/api/auth/register/",
+    //     JSON.stringify(formData)
+    //   );
 
-    if (response.access) {
-      handleLogin(response.user.pk, response.access, response.refresh);
+    //   if (response.access) {
+    //     handleLogin(response.user.pk, response.access, response.refresh);
 
-      signupModal.close();
+    //     signupModal.close();
 
-      router.push("/");
-    } else {
-      const tmpErrors: string[] = Object.values(response).map((error: any) => {
-        return error;
-      });
+    //     router.push("/");
+    //   } else {
+    //     const tmpErrors: string[] = Object.values(response).map((error: any) => {
+    //       return error;
+    //     });
 
-      setErrors(tmpErrors);
-    }
+    //     setErrors(tmpErrors);
+    //   }
   };
 
   const content = (
