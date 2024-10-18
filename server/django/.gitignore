@@ -1,0 +1,4 @@
+.env.dev
+manage.py
+myenv
+djangocozy/settings.py 
